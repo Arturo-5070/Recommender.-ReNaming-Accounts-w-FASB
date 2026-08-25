@@ -1,0 +1,199 @@
+{
+  "library_version": "1.0.0",
+  "language": "en",
+  "description": "Compact public US GAAP/XBRL-style account-label synonym reference for prototype use; all rules require accounting review.",
+  "connector_words": [
+    "a", "an", "and", "as", "at", "by", "for", "from", "in", "into", "of", "on", "or", "the", "to", "with", "without", "per", "via"
+  ],
+  "industry_aliases": {
+    "saas": "software",
+    "software as a service": "software",
+    "technology": "software",
+    "consumer goods": "retail",
+    "banking": "financial services",
+    "insurance": "financial services",
+    "oil and gas": "energy"
+  },
+  "entries": [
+    {
+      "canonical_label": "Cash and Cash Equivalents",
+      "account_type": "asset",
+      "industry": "all",
+      "contexts": ["balance sheet", "current assets", "treasury"],
+      "source_terms": ["cash", "bank", "checking", "savings", "cash equivalents", "petty cash", "treasury"],
+      "synonyms": ["cash on hand", "cash at bank", "bank deposits", "liquid funds", "cash reserve"],
+      "priority": 1
+    },
+    {
+      "canonical_label": "Accounts Receivable, Net",
+      "account_type": "asset",
+      "industry": "all",
+      "contexts": ["balance sheet", "current assets", "working capital"],
+      "source_terms": ["accounts receivable", "trade receivable", "customer receivable", "receivables", "trade debtors", "ar"],
+      "synonyms": ["customer accounts receivable", "trade accounts receivable", "net receivables", "amounts due from customers"],
+      "priority": 1
+    },
+    {
+      "canonical_label": "Inventory",
+      "account_type": "asset",
+      "industry": "all",
+      "contexts": ["balance sheet", "current assets", "working capital"],
+      "source_terms": ["inventory", "stock", "merchandise", "raw materials", "work in process", "finished goods", "wip"],
+      "synonyms": ["goods held for sale", "materials on hand", "production inventory", "product stock"],
+      "priority": 1
+    },
+    {
+      "canonical_label": "Inventory",
+      "account_type": "asset",
+      "industry": "manufacturing",
+      "contexts": ["manufacturing", "production", "cost accounting"],
+      "source_terms": ["raw material", "work in process", "finished product", "factory stock"],
+      "synonyms": ["raw materials inventory", "work-in-process inventory", "finished goods inventory", "manufacturing inventory"],
+      "priority": 2
+    },
+    {
+      "canonical_label": "Inventory",
+      "account_type": "asset",
+      "industry": "retail",
+      "contexts": ["retail", "merchandising", "current assets"],
+      "source_terms": ["merchandise", "retail stock", "goods for resale", "store stock"],
+      "synonyms": ["merchandise inventory", "retail merchandise", "goods held for resale", "store inventory"],
+      "priority": 2
+    },
+    {
+      "canonical_label": "Property, Plant and Equipment, Net",
+      "account_type": "asset",
+      "industry": "all",
+      "contexts": ["balance sheet", "noncurrent assets", "fixed assets"],
+      "source_terms": ["property plant equipment", "ppe", "fixed assets", "equipment", "machinery", "buildings", "land", "capital assets"],
+      "synonyms": ["fixed property and equipment", "operating equipment", "long-lived tangible assets", "net fixed assets"],
+      "priority": 1
+    },
+    {
+      "canonical_label": "Accounts Payable",
+      "account_type": "liability",
+      "industry": "all",
+      "contexts": ["balance sheet", "current liabilities", "working capital"],
+      "source_terms": ["accounts payable", "trade payable", "vendor payable", "supplier payable", "trade creditors", "ap"],
+      "synonyms": ["amounts due to suppliers", "vendor accounts payable", "trade accounts payable", "supplier liabilities"],
+      "priority": 1
+    },
+    {
+      "canonical_label": "Accrued Liabilities",
+      "account_type": "liability",
+      "industry": "all",
+      "contexts": ["balance sheet", "current liabilities", "accrual accounting"],
+      "source_terms": ["accrued liability", "accrual", "accrued expense", "accrued payable", "accrued payroll", "accrued interest"],
+      "synonyms": ["expenses accrued", "liabilities accrued", "unpaid accrued costs", "accrued obligations"],
+      "priority": 1
+    },
+    {
+      "canonical_label": "Deferred Revenue",
+      "account_type": "liability",
+      "industry": "software",
+      "contexts": ["revenue", "contract liabilities", "subscriptions", "saas"],
+      "source_terms": ["deferred revenue", "unearned revenue", "unearned subscription income", "contract liability", "customer advances", "deferred income", "subscription liability"],
+      "synonyms": ["deferred subscription revenue", "unearned subscription revenue", "billings not yet recognized", "customer contract liability", "revenue received in advance"],
+      "priority": 3
+    },
+    {
+      "canonical_label": "Revenue",
+      "account_type": "revenue",
+      "industry": "software",
+      "contexts": ["income statement", "subscriptions", "saas", "contract revenue"],
+      "source_terms": ["revenue", "sales", "service revenue", "subscription revenue", "product revenue", "net sales"],
+      "synonyms": ["subscription sales", "software revenue", "recognized contract revenue", "service sales"],
+      "priority": 2
+    },
+    {
+      "canonical_label": "Revenue",
+      "account_type": "revenue",
+      "industry": "retail",
+      "contexts": ["income statement", "sales", "merchandising"],
+      "source_terms": ["sales", "retail sales", "product sales", "merchandise sales", "turnover"],
+      "synonyms": ["net product sales", "store sales", "merchandise revenue", "retail revenue"],
+      "priority": 2
+    },
+    {
+      "canonical_label": "Cost of Revenue",
+      "account_type": "expense",
+      "industry": "all",
+      "contexts": ["income statement", "direct costs", "cost of sales"],
+      "source_terms": ["cost of revenue", "cost of goods sold", "cogs", "cost of sales", "cost of services", "direct cost"],
+      "synonyms": ["costs of products sold", "direct cost of sales", "cost of products", "cost of services delivered"],
+      "priority": 1
+    },
+    {
+      "canonical_label": "Cost of Revenue",
+      "account_type": "expense",
+      "industry": "software",
+      "contexts": ["income statement", "hosting", "service delivery", "saas"],
+      "source_terms": ["hosting cost", "cloud cost", "service delivery cost", "platform cost", "customer support cost"],
+      "synonyms": ["cost of subscription services", "cost of cloud services", "cost of platform operations", "service delivery expense"],
+      "priority": 2
+    },
+    {
+      "canonical_label": "Selling, General and Administrative Expense",
+      "account_type": "expense",
+      "industry": "all",
+      "contexts": ["income statement", "operating expenses", "overhead"],
+      "source_terms": ["selling general administrative", "sg&a", "sga", "general and administrative", "administrative expense", "selling expense", "overhead", "operating expense"],
+      "synonyms": ["selling and administrative costs", "corporate overhead", "general operating expenses", "commercial and administrative expense"],
+      "priority": 1
+    },
+    {
+      "canonical_label": "Research and Development Expense",
+      "account_type": "expense",
+      "industry": "software",
+      "contexts": ["income statement", "product development", "engineering"],
+      "source_terms": ["research and development", "r&d", "rd expense", "product development", "engineering expense", "research expense"],
+      "synonyms": ["software development expense", "engineering and research costs", "technology development expense", "product engineering expense"],
+      "priority": 3
+    },
+    {
+      "canonical_label": "Research and Development Expense",
+      "account_type": "expense",
+      "industry": "healthcare",
+      "contexts": ["income statement", "clinical development", "research"],
+      "source_terms": ["clinical research", "clinical development", "laboratory research", "drug development", "r&d"],
+      "synonyms": ["clinical research expense", "medical research costs", "development program expense", "research program costs"],
+      "priority": 3
+    },
+    {
+      "canonical_label": "Depreciation and Amortization Expense",
+      "account_type": "expense",
+      "industry": "all",
+      "contexts": ["income statement", "noncash expense", "fixed assets", "intangible assets"],
+      "source_terms": ["depreciation", "amortization", "depreciation expense", "amortization expense", "d&a"],
+      "synonyms": ["depreciation and amortisation", "long-lived asset expense", "noncash depreciation cost", "asset consumption expense"],
+      "priority": 1
+    },
+    {
+      "canonical_label": "Interest Expense",
+      "account_type": "expense",
+      "industry": "financial services",
+      "contexts": ["income statement", "borrowing", "debt"],
+      "source_terms": ["interest expense", "finance cost", "borrowing cost", "interest paid", "debt interest"],
+      "synonyms": ["cost of borrowings", "interest cost", "financing expense", "interest on debt"],
+      "priority": 2
+    },
+    {
+      "canonical_label": "Income Tax Expense",
+      "account_type": "expense",
+      "industry": "all",
+      "contexts": ["income statement", "tax provision", "taxes"],
+      "source_terms": ["income tax", "tax expense", "corporate tax", "provision for income taxes", "current tax", "deferred tax expense"],
+      "synonyms": ["income tax provision", "taxation expense", "corporate income tax cost", "tax provision expense"],
+      "priority": 1
+    },
+    {
+      "canonical_label": "Retained Earnings",
+      "account_type": "equity",
+      "industry": "all",
+      "contexts": ["balance sheet", "equity", "accumulated earnings"],
+      "source_terms": ["retained earnings", "accumulated earnings", "prior year earnings", "accumulated deficit", "deficit"],
+      "synonyms": ["accumulated profits", "undistributed earnings", "accumulated income", "retained profit"],
+      "priority": 1
+    }
+  ]
+}
